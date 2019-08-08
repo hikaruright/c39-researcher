@@ -8,6 +8,10 @@ var app = express()
 
 app.listen(process.env.PORT | 3000)
 
+app.get('/', (req, res) => {
+    res.send('hello.');
+})
+
 app.get('/info', (req, res) => {
 
     var url = req.query.url || 'https://twitter.com/' + req.query.user;
