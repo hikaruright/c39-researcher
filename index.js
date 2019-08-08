@@ -6,7 +6,7 @@ var NameCondition = require('./modules/name-filter')
 
 var app = express()
 
-app.listen(process.env.PORT | 3000)
+app.listen(process.env.PORT || 3000)
 
 app.get('/', (req, res) => {
     res.send('hello.');
